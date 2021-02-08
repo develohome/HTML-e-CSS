@@ -3,3 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container{
+    padding: 20px;
+    height: 500px;
+    background: cadetblue;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(2, 2fr);
+    /* grid-row-gap: 10px;
+    grid-column-gap: 20px; */
+    grid-gap: 10px;
+}
+.item{
+    background: brown;
+    border: 1px solid white;
+}
+.item--1{
+    grid-column: 1 / span 3;
+    /* grid-column:1 / -1; */
+}
+.item--2{
+    grid-row: 2 / span 2;
+    /* grid-row: 2 / -1; */
+}
+.item--3{
+    /* grid-column: 2 / -1; */
+}
