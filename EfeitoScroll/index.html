@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        *, *::backdrop, *::after{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: #181818;
+        }
+        .title{
+            text-align: center;
+            color: #a59f9f;
+            margin-top: 100px;
+        }
+        .cards{
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 100px;
+
+        }
+        .card{
+            color: #a59f9f;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #a59f9f;
+        }
+        .card:not(first-child){
+            margin-top: 20px;
+        }
+        .card p{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .card--1 p{
+            line-height: 32px;
+        }
+        .card--1{
+            height: 62vh;
+        }
+        button{
+            margin-top: 30px;
+            padding: 20px 50px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            color: black;
+            background: gray;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Animação no scroll</h1>
+
+    <div class="cards">
+        <div class="card card--1" >
+            <h1>Titulo do card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolorum obcaecati fugiat placeat quos illo quae quod est accusantium nulla blanditiis! Natus molestias id vel a consequuntur blanditiis, sunt illo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolorum obcaecati fugiat placeat quos illo quae quod est accusantium nulla blanditiis! Natus molestias id vel a consequuntur blanditiis, sunt illo.</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card card--2" data-aos="fade-up">
+            <h1>Titulo do card 2</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse reiciendis vel ullam autem alias quae totam iste officiis quis! Culpa similique molestiae, accusantium animi quod vel itaque tempore fuga. Minima!</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card card--3" data-aos="fade-left">
+            <h1>Titulo do card 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sapiente cupiditate labore tenetur modi, aliquid similique culpa fugiat excepturi iusto quas repellat ea reprehenderit maxime voluptatem tempora expedita totam at?</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card card--4" data-aos="fade-right">
+            <h1>Titulo do card 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quod nobis eos dicta tempore porro id voluptas eaque adipisci beatae! Omnis et suscipit consequuntur consequatur, ullam quod. Harum, doloremque vel.</p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
