@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+ul{
+    list-style: none;
+}
+body{
+    padding: 0 5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+header.campo--1{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.campo--1 .logo{
+    
+}
+header.campo--1 li{
+    list-style: none;
+    display: inline;
+    float: left;
+}
+header.campo--1 a{
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+}
+
+section.campo--2{
+    height: 80vh;
+    width: 100%;
+    border-top: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
+    overflow: hidden;
+    position: relative;
+}
+section.campo--2 .slider{
+    /* width: 400%;
+    height: 100%;
+    display: flex;
+    transition: all 2s; */
+    height: 100%;
+    position: relative;
+}
+section.campo--2 .slider .slider--item{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+}
+section.campo--2 .slider .slider--item:nth-child(1){
+    background-color: lawngreen;
+    
+}
+section.campo--2 .slider .slider--item:nth-child(2){
+    background-color: lightcoral;
+    
+}
+section.campo--2 .slider .slider--item:nth-child(3){
+    background-color: lightseagreen;
+}
+section.campo--2 .slider .slider--item:nth-child(4){
+    background-color: magenta;
+}
+section.campo--2 i{
+    position: absolute;
+    top: calc(50% - 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+section.campo--2 .fa:hover{
+    background: #bbbbbb31;
+}
+section.campo--2 i:nth-child(1){
+    left: 0;
+}
+section.campo--2 i:nth-child(2){
+    right: 0;
+}
+
+section.campo--3{
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+section.campo--3 .cards{
+    background-color: #f7f7f7;
+    border: 1px solid #b9b9b9;
+}
+
+section.campo--4{
+    height: 400px;
+    width: 100%;
+    background-color: #f7f7f7;
+    border: 1px solid #b9b9b9;
+}
+.item{
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin: 10px;
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
