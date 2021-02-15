@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     width: 100%;
     height: 100%;
@@ -71,7 +74,7 @@ main#main img{
     cursor: pointer;
 }
 main#main img:hover{
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
     box-shadow: 0 0 25px #331046;
 }
 img.coluna--1{
@@ -102,6 +105,14 @@ i.fa{
 }
 .fa-close:hover{
     transform: rotate(360deg)
+}
+h1#topo{
+    visibility: hidden;
+}
+a#scrollTopo{
+    position: fixed;
+    text-decoration: none;
+    z-index: 9999;
 }
 i.fa-arrow-up{
     position: fixed;
@@ -135,7 +146,7 @@ i.fa-arrow-up:hover{
     background: #fff2;
     backdrop-filter: blur(10px);
     z-index: 1;
-    display: none;
+    /* display: none; */
 }
 #modal--main{
     width: 70vw;
@@ -147,7 +158,19 @@ i.fa-arrow-up:hover{
     grid-template-columns: 2fr 1fr;
 }
 
-
+#imgMain{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+#imgMain img{
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    position: absolute;
+    border: 1px solid #000;
+}
 #descMain{
     position: relative;
     background: #191919;
@@ -179,14 +202,55 @@ i.fa-arrow-up:hover{
 }
 #MsgMain{
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0px;
     color: #fff;
     text-align: justify;
     overflow-y: scroll;
+    padding: 5px;
 }
-#MsgMain p{
+#MsgMain .MsgMain{
+    padding:15px;
+   border: 1px solid #464646;
+   margin-bottom: 20px;
+   color: #fff;
+   width: 100%;
+   min-height: 40px;
+   display: grid;
+   grid-template-columns: 1fr 4fr ;
+   grid-template-rows: 50px auto;
+   grid-template-areas: 'userPhoto userName' 'userMsg userMsg';
+}
+
+.userPhoto{
+    width: 100%;
+    position: relative;
+    grid-area:userPhoto ;
+}
+.userPhoto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.userName{
+    padding: 5px 10px;
+    grid-area:userName ;
+    display: flex;
+    flex-direction: column;
+    
+}
+.userName h4{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.Data-Post{
+    grid-area: Data-Post;
+    color: #8f8e8e;
+}
+.userMsg{
+    border-top: 1px solid #464646;
+    grid-area:userMsg ;
     padding: 10px 0;
-    border-bottom: 1px solid #666666;
+    margin-top: 15px;
 }
 #Descphoto p{
     letter-spacing: 1;
@@ -211,4 +275,23 @@ i.fa-arrow-up:hover{
     margin-bottom: 10px;
     visibility: hidden;
     margin: 10px 20px;
+}
+
+
+#MsgMain::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+#MsgMain::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+#MsgMain::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#MsgMain::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #66656580; 
 }

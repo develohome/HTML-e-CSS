@@ -8,7 +8,7 @@ for(let i = 1; i<5; i++){
 
 var elements = document.getElementsByClassName('colunas')
 for(let i = 0;i<elements.length;i++){
-    for(let x = 0; x< 10; x++){
+    for(let x = 0; x< 100; x++){
         let tam = Math.floor(Math.random() * 3 + 1)
         let pos = Math.random()
         let el = document.createElement('img')
@@ -19,9 +19,9 @@ for(let i = 0;i<elements.length;i++){
 }
 //  var selecionado = document.getElementsByTagName('img')
 var selecionado = document.querySelector('img')
- selecionado.addEventListener('click', teste)
+ selecionado.addEventListener('click', modalShow)
 
- function teste(){
+ function modalShow(){
     document.querySelector("#modal").style.display = "block"
  }
  var close = document.querySelector('.fa-close')
