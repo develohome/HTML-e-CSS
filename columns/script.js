@@ -41,3 +41,15 @@ var selecionado = document.querySelector('img')
     document.querySelector('#MainMsg').style.marginLeft = "0%";
     voltaComentarios.style.visibility = 'hidden'
  }
+var show = true;
+
+ function menuShow(){
+     if(show){
+        document.querySelector('#menu').style.display = "block"
+        show = false
+     }else{
+        document.querySelector('#menu').style.display = "none"
+        show = true
+     }
+    
+ }  
