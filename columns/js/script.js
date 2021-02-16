@@ -1,4 +1,4 @@
-
+// Lista de Nomes
 var nomes = [
    "Aaron",
    "Abel",
@@ -1706,8 +1706,10 @@ var nomes = [
    "Zuleika",
    "Zulima",
    "Zulmira"
-]
-var descricao = []
+];
+
+var descricao = []; // Declaração de Váriavel 
+// Criação de Array Obj
 for(let x = 0 ; x< nomes.length ; x++){
    descricao.push(
       {
@@ -1717,20 +1719,23 @@ for(let x = 0 ; x< nomes.length ; x++){
       }
    )
 }
-var main = document.querySelector('#main');
 
+var main = document.querySelector('#main'); // Seleção do campo principal
+
+// Loop para a criação das colunas
 for(let colX = 0 ; colX < 4;colX++){
-   let colsX = document.createElement('div');
-   colsX.classList.add('colunas')
-   main.appendChild(colsX);
+   let colsX = document.createElement('div'); // Criação das divs 
+   colsX.classList.add('colunas'); // Adiciona a classe colunas na div criada
+   main.appendChild(colsX); // Adiciona a div colunas na seleção principal
+   // Criação das imagens por coluna
    for(let colY = 0; colY < 100;colY++){
-      let coluna = document.querySelectorAll('.colunas');
-      let colsY = document.createElement('img');
-      let tam = Math.floor(Math.random() * 3 + 1)
-      let pos = Math.random()
-      colsY.src = `https://picsum.photos/600/600?random= ${pos}`;
-      colsY.classList.add(`coluna--${tam}`)
-      coluna[colX].appendChild(colsY);
+      let coluna = document.querySelectorAll('.colunas'); // Seleciona a coluna criada 
+      let colsY = document.createElement('img'); // Cria o elemento img
+      let tam = Math.floor(Math.random() * 3 + 1) // Cria um random entre 1 e 4
+      let pos = Math.random() // Cria um número aleatório
+      colsY.src = `https://picsum.photos/600/600?random= ${pos}`; // Passa o endereço da imagem para o elemento img criado. o pos é a posição da foto
+      colsY.classList.add(`coluna--${tam}`); // Para o elemento criado é add uma class aleatório para a definição da altura
+      coluna[colX].appendChild(colsY); // Cria o Elemento na coluna
       
    }
   
@@ -1739,29 +1744,34 @@ var posicaoImg;
 var imgs = document.querySelectorAll('img')
 var modal = document.querySelector("#modal").style;
 var descricaoPhoto = document.querySelector('#Descphoto')
+
+// Loop para a criação do evento click para cada img criada
 for(let i=0; i<imgs.length; i++) {
    imgs[i].addEventListener("click", function() {
-      posicaoImg = i
-      let imgSelect = this.src;   
-      modal.display = "block"
-      modal.opacity = 1
-      let insetImg = document.querySelector('#imgMain');
-      let el_img = document.createElement('img');
-      el_img.src = imgSelect;
-      insetImg.appendChild(el_img);
-      descricaoPhoto.innerHTML = `<h1>${descricao[i].nome}</h1>`;
-      descricaoPhoto.innerHTML += `<p>${descricao[i].msg}</p>`;
+      posicaoImg = i; // A váriavel que armazena a posição da img que foi clicada
+      let imgSelect = this.src;   // A váriavel que armazena a o caminho da img que foi clicada 
+      modal.display = "block"; // Abre o modal
+      modal.opacity = 1; // efeito para o modal
+      let insetImg = document.querySelector('#imgMain'); // A váriavel que armazena o campo principal onde será mostrada a img
+      let el_img = document.createElement('img'); // Cria um elemento img
+      el_img.src = imgSelect; // É passado o caminho da imagem selecionada
+      insetImg.appendChild(el_img); // Adiciona o elemento criado
+      descricaoPhoto.innerHTML = `<h1>${descricao[i].nome}</h1>`; // no campo descrição é inserido o nome da foto
+      descricaoPhoto.innerHTML += `<p>${descricao[i].msg}</p>`; // é inserido a descrição 
    });
 }
 
-document.querySelector('.fa-close').addEventListener('click', () => modal.display = 'none');
-var voltarDescricao = document.querySelector('#voltar');
+document.querySelector('.fa-close').addEventListener('click', () => modal.display = 'none'); // fecha o modal
 
+var voltarDescricao = document.querySelector('#voltar'); // Botão para voltar para a descrição 
+
+// Função para rolar para os comentários
 document.querySelector('.fa-comment-o').addEventListener('click', () => {
    document.querySelector('#MainMsg').style.marginLeft = '-100%'
    voltarDescricao.style.visibility = 'visible'
 });
 
+// Função para voltar para a descrição
 voltarDescricao.addEventListener('click', () =>{
    document.querySelector('#MainMsg').style.marginLeft = '0%';
    voltarDescricao.style.visibility = 'hidden'
@@ -1778,25 +1788,21 @@ function insertImg(posicao){
       descricaoPhoto.innerHTML += `<p>${descricao[posicao].msg}</p>`;
 }
 
+// Função para voltar uma img
 document.querySelector('#voltarImg').addEventListener('click', ()=>{
    if(posicaoImg == 0 ){
       posicaoImg = 0
    }else{
-      posicaoImg --;
+      posicaoImg --;// chama a Função para voltar ou ir pra frente
    }
    insertImg(posicaoImg)
 });
+// Função para ir para a próxima img
 document.querySelector('#proxImg').addEventListener('click', ()=>{
    if(posicaoImg == imgs.length){
-      posicaoImg = imgs.length
+      posicaoImg = imgs.length // armazena a posição limite da img
    }else{
-      posicaoImg ++
+      posicaoImg ++; // Adiciona uma posição
    }
-   insertImg(posicaoImg)
+   insertImg(posicaoImg); // chama a Função para voltar ou ir pra frente
 });
-
-
-
-
-
-// 
