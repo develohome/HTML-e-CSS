@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+
+/*============================== Reset da tala ======================*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    width: 100%;
+    height: 100%;
+}
+ul, li{
+    list-style: none;
+}
+input[type=checkbox]{
+    display: none;
+}
+/*============================== Animações da tela ======================*/
+#corTela:checked ~ #container{
+    background-color: #191919;
+}
+#corTela:checked ~ #container li{
+    color: rgb(199, 195, 195);
+}
+@keyframes texto{
+    100%{
+        background-size: 100%;
+    }
+}
+
+
+/*============================== Icones =================================*/
+header#header nav i{
+    font-size: 1.3em;
+    width: 25px;
+}
+header#header nav i.fa-bars{
+    background: linear-gradient(45deg, #05bddd, #f11a7e);
+    font-size: 2em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+#modal #descMain i{
+    background: linear-gradient(45deg, #05bddd, #f11a7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 1s;
+    cursor: pointer;
+}
+#imgMain i.fa-angle-left, #imgMain i.fa-angle-right{
+    position: absolute;
+    background:#fff1;
+    color: #fff8;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all ease-in-out 1s;
+}
+#imgMain i.fa-angle-left:hover, #imgMain i.fa-angle-right:hover{
+    background: linear-gradient( to right, transparent, #0005);
+    color: #fff;
+}
+#imgMain i.fa-angle-left{
+    left: 0;
+}
+#imgMain i.fa-angle-right{
+    right: 0;
+}
+#modalMsgFooter .footerDesc i.fa{
+    font-size: 1.5em;
+}
+#modalMsgHeader i.fa-angle-left{
+    margin-bottom: 10px;
+    visibility: hidden;
+    font-size: 2em;
+    margin: 10px 20px;
+}
+i.fa-close{
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 2em;
+}
+.fa-close:hover{
+    transform: rotate(360deg)
+}
+
+/*#Modal i.fa{
+    background: linear-gradient(45deg, #05bddd, #f11a7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+
+h1#topo{
+    visibility: hidden;
+}
+a#scrollTopo{
+    position: fixed;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+ */
+i.fa-arrow-up{
+    position: fixed;
+    bottom: 10px;
+    right:50px;
+    border: 1px solid #19191946;
+    -webkit-text-fill-color:#ffffff52;
+    box-shadow: 0 0 10px #191919;
+    background: #1919191a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all ease-in-out 1s;
+}
+i.fa-arrow-up:hover{
+    background: #191919;
+    -webkit-text-fill-color:#ffffff;
+}

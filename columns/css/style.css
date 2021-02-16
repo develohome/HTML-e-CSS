@@ -1,23 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+@import'anima.css';
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-  }
-body{
+#container{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: ease-in all 1s;
 }
-ul{
-    list-style: none;
-}
-input[type=checkbox]{
-    display: none;
-}
+
 /*============================HEADER==================================*/
 header#header{
     width: 100%;
@@ -36,7 +25,6 @@ header#header{
     box-shadow: 0 1px 5px #aaaaaa;
 }
 header#header #logo h1{
-   
     background: linear-gradient(45deg, #05bddd, #f11a7e);
     background-size: 400%;
     -webkit-background-clip: text;
@@ -47,38 +35,48 @@ header#header #logo h1{
 header#header #logo h1:hover{
     
 }
-@keyframes texto{
-    100%{
-        background-size: 100%;
-    }
-}
 header#header i{
     font-size: 2em;
 }
+
 header#header nav{
     position: relative;
+    display: flex;
+    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
-header#header #menu{
-    width: 300px;
-    height: 300px;
-    border: 1px solid #b3b3b3;
+header#header nav:hover ul{
+    display: block;
+}
+header#header ul{
+    width: 200px;
+    top: 10vh;
     position: absolute;
     right: 0px;
-    top: 7.4vh;
-    background-color: #fff;
+    background: #fff2;
+    backdrop-filter: blur(10px);
+    border: 1px solid #b3b3b3;
     box-shadow: 0 1px 5px #aaaaaa;
-    padding: 20px;
-    transition: ease-in all 1s;
+    padding-top: 10px;
     display: none;
+    border-radius: 0 0 10px 10px;
+    z-index: 9999;
 }
-i.fa-adjust{
-    font-size: 1.5em !important;
-    
+header#header li{
+    padding:  10px;
+    color: rgb(83, 83, 83);
 }
+
 /*============================ FIM HEADER==================================*/
+
+/*================================= MAIN ==================================*/
+
 main#main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
     width: 100%;
     height: auto;
     margin-top: 10vh;
@@ -90,7 +88,6 @@ main#main .colunas{
     flex-direction: column;
     padding: 5px ;
 }
-
 
 
 main#main img{
@@ -106,66 +103,17 @@ main#main img:hover{
     transform: rotate(-5deg);
     box-shadow: 0 0 25px #331046;
 }
-img.coluna--1{
+main#main img.coluna--1{
     height: 20vh;
 }
-img.coluna--2{
+main#main img.coluna--2{
     height: 40vh;
 }
-img.coluna--3{
+main#main img.coluna--3{
     height: 60vh;
 }
-#container{
-    overflow-x: hidden;
-    transition: ease-in all 1s;
-}
-i.fa{
-    background: linear-gradient(45deg, #05bddd, #f11a7e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    transition: all 1s;
-    cursor: pointer;
-}
-.fa-close{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-}
-.fa-close:hover{
-    transform: rotate(360deg)
-}
-h1#topo{
-    visibility: hidden;
-}
-a#scrollTopo{
-    position: fixed;
-    text-decoration: none;
-    z-index: 9999;
-}
-i.fa-arrow-up{
-    position: fixed;
-    bottom: 10px;
-    right:10px;
-    border: 1px solid #19191946;
-    -webkit-text-fill-color:#ffffff52;
-    box-shadow: 0 0 10px #191919;
-    background: #1919191a;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    cursor: pointer;
-    z-index: 9999;
-}
-i.fa-arrow-up:hover{
-    background: #191919;
-    -webkit-text-fill-color:#ffffff;
-}
+
+
 #modal{
     width: 100%;
     height: 100%;
@@ -177,6 +125,8 @@ i.fa-arrow-up:hover{
     backdrop-filter: blur(10px);
     z-index: 1;
     display: none;
+    opacity: 0;
+    transition: ease-in-out all 5s;
 }
 #modal--main{
     width: 70vw;
@@ -208,8 +158,9 @@ i.fa-arrow-up:hover{
     flex-direction: column;
 }
 #modalMsgHeader{
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 8vh;
 }
 #modalMsgMain{
@@ -298,14 +249,6 @@ i.fa-arrow-up:hover{
     text-align: center;
 }
 
-#modalMsgFooter .footerDesc i.fa{
-    font-size: 1.5em;
-}
-.fa-angle-left{
-    margin-bottom: 10px;
-    visibility: hidden;
-    margin: 10px 20px;
-}
 
 
 #MsgMain::-webkit-scrollbar {

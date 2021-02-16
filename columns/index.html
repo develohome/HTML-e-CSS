@@ -5,36 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <input type="checkbox" name="" id="cor">
-    <div id="container">
-        <header id="header">
-            <div id='logo'><h1>My Photo</h1></div>
-            <nav>
-                <i class="fa fa-bars" onclick="menuShow()"></i>
-                <div id="menu">
-                    <ul>
-                        <li><label for="cor"><i class="fa fa-adjust" style=""> Cor de fundo</i></label></i></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <h1 id="topo"> teste</h1>
-        <main id="main">
-            <a href="#topo" id='scrollTopo'><i class="fa fa-arrow-up"></i></a>
-        </main>
-    </div>
-    <div id="modal">
-        <div id="modal--main">
+    <input type="checkbox" name="" id="corTela">
+    <i class="fa fa-arrow-up"></i>
+    <div id="container"> <!--Incio do Container-->
+       <header id="header"> <!-- INICIO DO HEADER -->
+           <div id="logo"> <!-- INICIO DO LOGO -->
+               <h1>My 
+                   Photo
+               </h1>
+           </div> <!-- FIM DO LOGO -->
+           <nav> <!-- INICIO DO NAV -->
+            <i class="fa fa-bars"></i>
+               <ul>
+                    <li>
+                        <i class="fa fa-user"></i> Perfil
+                    </li>
+                    <li>
+                        <label for="corTela">
+                            <i class='fa fa-adjust'></i> Cor da Tela 
+                        </label>
+                    </li>
+               </ul>
+           </nav>
+       </header>
+       <main id="main"></main>
+    </div> <!--Fim do Container-->
+
+    <div id="modal"> <!--Incio do Modal-->
+        <div id="modal--main"> 
             <div id="imgMain">
-                <img src="https://picsum.photos/200/300?random=1" alt="">
+                <i class='fa fa-angle-left' id="voltarImg"></i>
+                <i class='fa fa-angle-right' id="proxImg"></i>
             </div>
             <div id="descMain">
                 <header id="modalMsgHeader">
-                    <i class='fa fa-angle-left'></i>
+                    <i class='fa fa-angle-left' id="voltar"></i>
                     <i class="fa fa-close" title="Fechar"></i>
                 </header>
                 <section id="modalMsgMain">
@@ -75,8 +84,8 @@
                 </footer>
             </div>
         </div>
-    </div>
+    </div><!--Fim do Modal-->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
