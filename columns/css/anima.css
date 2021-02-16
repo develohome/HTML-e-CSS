@@ -137,3 +137,16 @@ i.fa-arrow-up:hover{
     background: #191919;
     -webkit-text-fill-color:#ffffff;
 }
+
+
+
+/*========================== Animação ========================*/
+
+@keyframes apareceImg{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
