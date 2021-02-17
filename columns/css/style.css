@@ -258,6 +258,9 @@ main#main img.coluna--3{
     flex-grow: 1;
     text-align: center;
 }
+#modalMsgFooter .footerDesc span{
+    font-size: .8em;
+}
 
 /*================================================== FIM DO MODAL ======================================================*/
 
