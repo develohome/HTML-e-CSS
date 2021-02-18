@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor1:#00b7ff;
+    --cor2:#86045f;
+}
+body{
+    background: #202020;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    background: #202020;
+    padding: 50px;
+}
+form::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    transform: skew(2deg, 2deg);
+    background: linear-gradient(to right, var(--cor1), var(--cor2));
+    z-index: -1;
+}
+form input{
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: #202020;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    position: relative;
+    color: #f0f0f0;
+}
+form input::placeholder{
+    background: linear-gradient(130deg, var(--cor1), var(--cor2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.box span{
+    height: 2px;
+    width: 0%;
+    display: block;
+    background: linear-gradient(to right, var(--cor1), var(--cor2));
+    position: absolute;
+    bottom: 30px;
+    transition: all ease-in-out 1s;
+}
+input:focus+span{
+    width: 100%;
+}
+i.fa-user-circle-o{
+    font-size: 80px;
+    background: linear-gradient(130deg, var(--cor1), var(--cor2));
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: anime 1.4s forwards;
+    margin-bottom: 40px;
+}
+input[type="submit"]{
+    position: relative;
+    background: linear-gradient(130deg, var(--cor1), var(--cor2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+input[type="submit"]:hover{
+    background: linear-gradient(130deg, var(--cor1), var(--cor2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 20px var(--cor2),
+                0 0 40px var(--cor1),
+                0 0 60px var(--cor1)
+    ;
+}
+@keyframes anime{
+    100%{
+        background-size: 100%;
+    }
+}
