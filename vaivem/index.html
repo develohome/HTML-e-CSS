@@ -61,7 +61,30 @@
             <button class="vai">Vai</button>
             <button class="vem">Vem</button>
         </div>
-        
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
+        <div class="box">
+            <button class="vai">Vai</button>
+            <button class="vem">Vem</button>
+        </div>
     </div>
     <script>
         var vai = document.querySelectorAll('.vai');
@@ -71,9 +94,11 @@
         for(let i = 0; i< box.length ;i++){
             vai[i].addEventListener('click', function(){
                 box[i].style.transform = `translateX(-100%)`;
+                box[i].style.backgroundColor = "aliceblue";
             });
             vem[i].addEventListener('click', function(){
                 box[i].style.transform = `translateX(100%)`;
+                box[i].style.backgroundColor = 'antiquewhite'
             });
         }
        
