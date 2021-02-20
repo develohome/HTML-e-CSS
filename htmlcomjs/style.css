@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100,200,300,400,500,600,700,800,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #202020;
+}
+/*-----------------------------header--------------------------*/
+.header{
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+.header .logo{
+
+}
+.header .logo h1{
+    color: #fff;
+    background: linear-gradient(to left, yellow, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.header .logo h1 a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.header .menu{
+    
+}
+.header .menu ul{
+    display: flex;
+}
+.header .menu ul li{
+    list-style: none;
+}
+.header .menu ul li a{
+    text-decoration: none;
+    display: block;
+    padding:0 10px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+/*-----------------------------main---------------------------*/
+.main{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.main span{
+    display: block;
+    position: absolute;
+    height: 2px;
+}
+.main span:nth-child(1){
+    background: linear-gradient(to left, yellow, red);
+    top: -2px;
+    right: 0;
+    animation: animeSpan 1.5s ease-in-out forwards;
+}
+.main span:nth-child(2){
+    background: linear-gradient(to right, yellow, red);
+    bottom: -3px;
+    left: 0;
+    animation: animeSpan 1.5s ease-in-out forwards;
+}
+/*------------------------------------------------------------------------------------------------------*/
+.main .slide--width{
+    width: 100%;
+    height: 80vh;
+    opacity: 0;
+    animation: animeSlide--width 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    transition: all 1s ease-in-out;
+}
+/*------------------------------------- */
+.main .slide--width .inicio{
+    background: url(./pexels-cottonbro-5473299.jpg), linear-gradient(to left,#000, transparent);
+    background-blend-mode: luminosity;
+    background-size: 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 100px;
+    position: relative;
+    height: inherit;
+}
+.main .slide--width .inicio .capa{
+    background: #0005;
+    backdrop-filter: blur(20px);
+    margin-top: -3vh;
+    height: 86vh;
+    border: 1px solid #fff3;
+    border-radius: 10px;
+    padding: 5vh 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.main .slide--width .inicio   .capa .photo_capa .fa-user-circle{
+    font-size: 7em;
+    color:#fff;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.main .slide--width .inicio   .capa .photo_capa h2{
+    font-size: 2em;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.main .slide--width .inicio .capa .desc_capa{
+    height: 45vh;
+    padding: 20px;
+}
+.main .slide--width .inicio .capa .desc_capa p{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: #fff;
+}
+.main .slide--width .inicio  .capa .social_capa{
+    display: flex;
+    flex-direction: row;
+}
+.main .slide--width .inicio  .capa .social_capa i.fa{
+    font-size: 2.5em;
+    margin:5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all ease-out 1s;
+    color: #fafafa77;
+    border: 1px solid #fafafa77;
+    border-right: 1px solid #fafafa44;
+    border-bottom: 1px solid #fafafa44;
+    background: none;
+    box-shadow: none;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .slide--width .inicio  .capa .social_capa .fa:hover{
+    /* transform: translateY(-20px); */
+    z-index: 0;
+    color: #fff;
+}
+.main .slide--width .inicio  .capa .social_capa .fa:hover::after{
+   transform: skewX(45deg) translate(-100px);
+}
+.main .slide--width .inicio  .capa .social_capa .fa::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background-color: #ffffff;
+    transform: skewX(45deg) translateX(80px);
+    transition: .2s all linear;
+}
+.main .slide--width .inicio  .capa .social_capa i.fa:hover{
+    color: #fff;
+    background: none;
+}
+.main .slide--width .inicio  .descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 50px 0;
+    color: #fff;
+}
+.main .slide--width .inicio  .descricao h1{
+    font-size: 3em;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.main .slide--width .inicio .descricao p{
+    font-size: 1.5em;
+    text-align: center;
+}
+/*===============================================================================================*/
+
+
+/*----------------------------footer--------------------------*/
+.footer{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: #fff;
+    font-size: 1.1em;
+}
+
+
+
+/*============================ Animação ======================*/
+
+@keyframes animeSpan{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes animeSlide--width{
+    100%{
+        opacity: 1;
+    }
+}
