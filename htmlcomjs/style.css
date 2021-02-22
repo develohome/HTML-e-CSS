@@ -219,6 +219,9 @@
 
 .main .sobre{
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 .main .sobre span{
     display: block;
@@ -258,8 +261,10 @@
     left: 570px;
     animation-delay: 4s;
 }
-
-
+.main .sobre .sobre_bx{
+    height: 100%;
+    color: #fff;
+}
 
 
 
@@ -292,7 +297,7 @@
         transform: translateY(100%);
     }
     50%{
-        transform: translateY(calc(-110vh)) rotate(360deg);
+        transform: translateY(calc(-120vh)) rotate(360deg);
 
     }
     

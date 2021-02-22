@@ -155,6 +155,15 @@ let el_header = document.createElement('header');
         let span = document.createElement('span')
         class_sobre.appendChild(span);
     }
+    for(let i = 0; i<3;i++){
+        let sobre_bx = document.createElement('div')
+        sobre_bx.classList.add('sobre_bx')
+        class_sobre.appendChild(sobre_bx);
+    }
+    const class_sobre_bx = document.querySelectorAll('.sobre_bx')
+            el_sobre = document.createElement('h2')
+            //el_sobre.innerHTML = 'Sobre';
+            class_sobre_bx[0].appendChild(el_sobre);
 //==================================================== footer
     var hoje = new Date();
     let ano = hoje.getFullYear()
