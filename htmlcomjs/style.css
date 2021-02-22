@@ -218,7 +218,51 @@
 
 
 .main .sobre{
+    position: relative;
 }
+.main .sobre span{
+    display: block;
+    background: rgba(255, 255, 255, 0.04);
+    position: absolute;
+    bottom: -200px;
+    opacity: 1;
+    animation: cubosAnimados 20s infinite;
+}
+.main .sobre span:nth-child(1){
+    width: 120px;
+    height: 120px;
+    left: 30px;
+    animation-delay: .1s;
+}   
+.main .sobre span:nth-child(2){
+    width: 80px;
+    height: 80px;
+    left: 180px;
+    animation-delay: 4s;
+}
+.main .sobre span:nth-child(3){
+    width: 50px;
+    height: 50px;
+    left: 290px;
+    animation-delay: 6s;
+}
+.main .sobre span:nth-child(4){
+    width: 130px;
+    height: 130px;
+    left: 380px;
+    animation-delay: 1.5s;
+}
+.main .sobre span:nth-child(5){
+    width: 100px;
+    height: 100px;
+    left: 570px;
+    animation-delay: 4s;
+}
+
+
+
+
+
 .main .contato{
 }
 
@@ -243,7 +287,16 @@
         opacity: 1;
     }
 }
+@keyframes cubosAnimados{
+    0% 100%{
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(calc(-110vh)) rotate(360deg);
 
+    }
+    
+}
 /*================ icons ============*/
 
 i.fa-user-circle{

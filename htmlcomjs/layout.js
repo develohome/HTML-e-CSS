@@ -131,8 +131,6 @@ let el_header = document.createElement('header');
                 class_capa_bx[2].appendChild(el_capa_bx3)
         }
 
-
-
     let el_inicio_direito = document.createElement('div');
         el_inicio_direito.classList.add('inicio_direito');
         inicio.appendChild(el_inicio_direito);
@@ -150,7 +148,13 @@ let el_header = document.createElement('header');
 
     let  el_descricao_p = document.createElement('p');
         el_descricao_p.innerHTML = user[0].texto;
-        descricao.appendChild(el_descricao_p)
+        descricao.appendChild(el_descricao_p);
+
+    const class_sobre =  document.querySelector('.sobre');
+    for(let i = 0; i<6;i++){
+        let span = document.createElement('span')
+        class_sobre.appendChild(span);
+    }
 //==================================================== footer
     var hoje = new Date();
     let ano = hoje.getFullYear()
