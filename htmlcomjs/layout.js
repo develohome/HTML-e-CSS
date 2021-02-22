@@ -141,6 +141,16 @@ let el_header = document.createElement('header');
         elemento_main_direito = document.createElement('div');
         elemento_main_direito.classList.add('main_direito');
         class_inicio_direito.appendChild(elemento_main_direito)
+
+
+    let descricao = document.querySelector('.main_direito');
+    let el_descricao_h1 = document.createElement('h1');
+        el_descricao_h1.innerHTML = user[0].funcao;
+        descricao.appendChild(el_descricao_h1);
+
+    let  el_descricao_p = document.createElement('p');
+        el_descricao_p.innerHTML = user[0].texto;
+        descricao.appendChild(el_descricao_p)
 //==================================================== footer
     var hoje = new Date();
     let ano = hoje.getFullYear()
@@ -149,5 +159,23 @@ let el_header = document.createElement('header');
         class_footer.innerHTML = `<p>Todos os direito &copy;${ano}</p>`
         container.appendChild(class_footer);
 
+
+// ===================================== funções
+
+function escrever(elemento){
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => {
+            elemento.innerHTML += letra;
+        }, 175 * i)
+    });
+}
+const titulo = document.querySelector('.main_direito h1');
+
+setTimeout(acionaMsg,1600);
+function acionaMsg(){
+    escrever(titulo)
+}
     
 
