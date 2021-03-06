@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=RocknRoll+One&display=swap');
+:root{
+    --amarelo1:#D9B504;
+    --amarelo2:#F29F05;
+    --laranja:#D97904;
+    --vermelho1:#BF0404;
+    --vermelho2:#730202;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+body{
+    background:#181818;
+    height: 2100px;
+}
+
+header.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s;
+    flex-direction: row-reverse;
+    background: #181818;
+}
+header.header img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+header.header i.fa-navicon{
+    color: #fff;
+    position: absolute;
+    right:100px ;
+    top: 2vh;
+    font-size: 2vw;
+}
+header.header a{
+    font-family: 'RocknRoll One', sans-serif;
+    color: var(--vermelho1);
+    position: absolute;
+    font-size: 5vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 1s;
+    text-shadow: 1px 1px 0 var(--amarelo1);
+}
+header.header a p{
+    color: #FFF;
+    text-shadow: none;
+    transition: 0.3s;
+}
+header.header a p i{
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+header.header a p span{
+    position: relative;
+}
+header.header a p span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background: var(--vermelho1);
+}
+header.fixo{
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header.fixo img{
+    opacity: .5;
+
+}
+header.fixo a{
+    font-size: 2vw;
+    left: 100px;
+    transform: translate(0, -40%);
+}
+header.fixo a p{
+    visibility: hidden;
+}
+section.item--1{
+    width: 100%;
+    z-index: -1;
+    padding: 25vh 100px 10px 100px;
+}
+section.item--1 .promocao{
+    width: 100%;
+    height: auto;
+    padding: 20px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.item--1 .promocao .textoPromocao{
+    text-align: center;
+    margin-right: 30px;
+}
+section.item--1 .promocao .textoPromocao h1{
+    color: var(--vermelho1);
+    text-transform: capitalize;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+section.item--1 .promocao .textoPromocao h2{
+    color: var(--amarelo1);
+    text-transform: uppercase;
+    font-size: 2em;
+}
+section.item--1 .promocao .valorPromocao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+section.item--1 .promocao .valorPromocao .real h1{
+    font-size: 7em;
+    
+}
+section.item--1 .promocao .valorPromocao .centavos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+section.item--1 .promocao .valorPromocao .centavos h1{
+    font-size: 1.5em;
+}
+section.item--1 .promocao .valorPromocao .centavos h2{
+    font-size: 2em;
+    color: var(--vermelho1);
+}
+section.item--1 .cardPromocao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+section.item--1 .cardPromocao .diaSemana{
+    width: 240px;
+    border: 1px solid var(--laranja);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: capitalize;
+    transition: .5s;
+}
+section.item--1 .cardPromocao .diaSemana:hover{
+    transform: translateY(-10px);
+}
+section.item--1 .cardPromocao .diaSemana h2{
+    color: #FFF;
+    font-size: 1.5em;
+}
+section.item--1 .cardPromocao .diaSemana p{
+    color: var(--vermelho1);
+    font-size: 1.2em;
+    font-weight: 900;
+}
+section.item--1 .cardPromocao img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 1px solid var(--laranja);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--vermelho2);
+}
+
+section.esfihas{
+   display: flex;
+   flex-direction: column;
+   padding: 0 100px;
+   margin-top: 20px;
+}
+section.esfihas .precos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.esfihas .precos h1{
+    color: var(--amarelo1);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 var(--vermelho1);
+}
+section.esfihas .precos .esfihaSalgadas{
+    width: 49%;
+    height: 500px;
+    background:url(./img/esfihaSalgada.jpg) no-repeat, linear-gradient(to left, #030303, transparent);
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--laranja);
+}
+
+section.esfihas .precos .content{
+    width: 100%;
+    height: 100%;
+    background: #0008;
+    padding: 20px 30px;
+    
+}
+section.esfihas .precos .content .descEsfiha{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+section.esfihas .precos .content:hover .esfihaValor{
+    transform: scale(1.3,1.3) translateX(-20px);
+}
+section.esfihas .precos  ul{
+    width: 68%;
+    margin-top: 30px;
+    padding: 30px;
+}
+section.esfihas .precos  ul li{
+    color: #FFF;
+    text-transform: capitalize;
+    font-size: 1.3em;
+    height: 50px;
+}
+
+section.esfihas .precos .esfihaDoce{
+    width: 49%;
+    height: 500px;
+    background:url(./img/esfihadoce.jpg) no-repeat, linear-gradient(to left, #030303, transparent);
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--laranja);
+}
+section.esfihas .precos .content .descEsfiha .esfihaValor{
+    width: 32%;
+    height: 200px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+section.esfihas .precos .content .descEsfiha .esfihaValor .esfihaReal h1{
+    color: #FFF;
+    font-size: 8em;
+    margin-right: 10px;
+}
+section.esfihas .precos .content .descEsfiha .esfihaValor .esfihaCentavos{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+section.esfihas .precos .content .descEsfiha .esfihaValor .esfihaCentavos h1{
+    color: #FFF;
+    font-size: 3em;
+    
+}
+section.esfihas .precos .content .descEsfiha .esfihaValor .esfihaCentavos h2{
+    color: var(--vermelho1);
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 1px 1px 0 var(--amarelo2);
+}
+section.esfihas .novidades{
+    margin-top: 30px;
+}
+section.esfihas .novidades h1{
+    color: var(--amarelo2);
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px var(--vermelho1);
+    margin-bottom: 20px;
+}
+section.esfihas .novidades .novidadesEsfihas{
+    width: 100%;
+    height: 400px;
+    background: url(./img/esfihacamarão.jpg) no-repeat #0005;
+    background-attachment: fixed;
+    background-blend-mode: luminosity;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--laranja);
+    border-radius: 10px;
+}
+section.esfihas .novidades .novidadesEsfihas .content{
+    width: 600px;
+    height: 200px;
+    background: #0007;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--laranja);
+
+}
+section.esfihas .novidades .novidadesEsfihas .content .novs h2{
+    color: #FFF;
+    text-transform:capitalize;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #BF0404;
+}
+section.esfihas .novidades .novidadesEsfihas .content .preco{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+section.esfihas .novidades .novidadesEsfihas .content .preco .esfihaReal h1{
+    color: #FFF;
+    font-size: 8em;
+}
+section.esfihas .novidades .novidadesEsfihas .content .preco .esfihaCentavos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+section.esfihas .novidades .novidadesEsfihas .content .preco .esfihaCentavos h1{
+    color: #FFF;
+    text-shadow: 1px 1px 0 var(--vermelho1);
+    font-size: 3em;
+    margin-top: -30px;
+}
+section.esfihas .novidades .novidadesEsfihas .content .preco .esfihaCentavos h2{
+    color: var(--vermelho1);
+    font-size: 2.5em;
+    text-shadow: 1px 1px 0 var(--amarelo2);
+    margin-top: -30px;
+    padding: 0;
+}
