@@ -8,7 +8,7 @@
     height: 500px;
     background: cadetblue;
     display: grid;
-    grid-template-columns: repeat(auto-fit,  minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
     grid-template-rows:repeat(3, 2fr);
     /* grid-template-areas: 'h h h'
                          'l l r'

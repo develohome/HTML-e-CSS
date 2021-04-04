@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+#dark{
+    display: none;
+}
+i.fa{
+    font-size: 3rem;
+    color: aqua;
+}
+#dark:checked ~ .container{
+    background-color: #191919;
+}
