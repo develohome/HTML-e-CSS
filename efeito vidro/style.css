@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span{
+    position: absolute;
+    filter: blur(150px);
+    width: 300px;
+    height: 300px;
+}
+span:nth-child(1){
+    top: 8%;
+    left:10%;
+    background: aqua;
+}
+span:nth-child(2){
+    right: 30%;
+    top:10%;
+    background: chartreuse;
+}
+span:nth-child(3){
+    bottom: 5%;
+    left: 25%;
+}
+span:nth-child(4){
+    
+}
